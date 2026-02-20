@@ -26,7 +26,6 @@ int main(void) {
         exit(EXIT_FAILURE);
     }
 
-    // No second connect call here
 
     dup2(sockt, 0);
     dup2(sockt, 1);

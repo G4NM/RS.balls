@@ -11,7 +11,7 @@
 #include <sys/select.h>
 
 int main(void) {
-    int port = 49152;
+    int port = 49153;
     struct sockaddr_in revsockaddr;
     memset(&revsockaddr, 0, sizeof(revsockaddr));
 

